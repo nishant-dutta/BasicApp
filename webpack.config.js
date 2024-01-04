@@ -1,11 +1,3 @@
-// module.exports = {
-//     entry: './src/app.js',
-//     output: {
-//         filename: './app.bundle.js'
-//     },
-//     mode: 'development'
-// }
-
 var webpack = require('webpack');
 var path = require('path');
 
@@ -28,8 +20,12 @@ var config = {
                 use: 'babel-loader'
             },
             {
-                test: /.css$/,
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                use: 'file-loader'
             }
         ]
     }
