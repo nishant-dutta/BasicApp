@@ -1,0 +1,5 @@
+#dependency packages
+node_modules
+
+#log files
+yarn-error.log
