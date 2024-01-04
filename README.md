@@ -1,0 +1,3 @@
+This project contains files as a part of POC for learning webpack and babel. 
+
+More info on this will be updated soon....
