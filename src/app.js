@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { render } from "react-dom";
 
-import './app.css';
+import './app.scss';
 
 import img from '../assets/react.png';
 

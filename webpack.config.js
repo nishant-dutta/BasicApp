@@ -24,6 +24,10 @@ var config = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 use: 'file-loader'
             }
