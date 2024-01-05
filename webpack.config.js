@@ -10,7 +10,22 @@ var config = {
     entry: APP_DIR + '/app.js',
     output: {
         path: BUILD_DIR,
-        filename: 'app.bundle.js',
+        filename: '[name].js',
+    },
+    optimization: {
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                    reuseExistingChunk: true,
+                    idHint: 'vendors',
+                },
+            }
+        }
     },
     module: {
         rules : [
