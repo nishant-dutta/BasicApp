@@ -10,7 +10,7 @@ var config = {
     entry: APP_DIR + '/app.js',
     output: {
         path: BUILD_DIR,
-        filename: '[name].js',
+        filename: '[name].[chunkhash].js',
     },
     optimization: {
         moduleIds: 'deterministic',
