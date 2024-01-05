@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.join(__dirname, 'dist');
 var APP_DIR = path.join(__dirname, 'src');
@@ -32,7 +33,12 @@ var config = {
                 use: 'file-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new htmlWebpackPlugin({
+            template: 'index.html'
+        })
+    ]
 }
 
 module.exports = config;
