@@ -49,6 +49,16 @@ var config = {
             }
         ]
     },
+    devServer:{
+        compress: true, // Enable gzip compression for everything served
+        port: 9000, // Port on which dev server runs
+        headers: {
+            user: 'nishant'
+            // add custom response headers to be present on dev env like authentication token
+        },
+        open: true, // open on browser after dev server is ready
+        // hot: true // turn on Hot Module Replacement
+    },
     plugins: [
         new htmlWebpackPlugin({
             template: 'index.html'
