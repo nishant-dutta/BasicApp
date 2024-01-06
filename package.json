@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "npm run clean && webpack --config webpack.config.js",
-    "http-server": "http-server dist/"
+    "build": "npm run clean && webpack --config webpack.config.js",
+    "dev" : "webpack-dev-server"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -17,16 +17,16 @@
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
-    "http-server": "^14.1.1",
     "node-sass": "^9.0.0",
+    "rimraf": "^5.0.5",
     "sass-loader": "^13.3.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "rimraf": "^5.0.5"
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "webpack-dev-server": "^4.15.1"
   }
 }
